@@ -1,0 +1,241 @@
+body {
+  background-color: #000;
+  overflow: hidden
+}
+
+h1 {
+  font-family: constantia,georgia,serif;
+  font-size: 36pt;
+  text-align: center;
+  line-height: 3em;
+  color: #ccc;
+}
+
+h2 {
+  font-family: candara,verdana,sans-serif;
+  font-size: 48pt;
+  text-align: center;
+}
+
+h3 {
+  font-family: constantia,georgia,serif;
+  font-size: 20pt;
+}
+
+p {
+  font-family: constantia,georgia,serif;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.sec{
+  position: absolute;
+  bottom: 16%;
+  left: 2%;
+}
+
+.min{
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
+}
+
+.hour{
+  position: absolute;
+  bottom: 4%;
+  left: 2%;
+}
+
+.timeTitle{
+  position: absolute;
+  bottom: 22%;
+  left: 2%;
+}
+
+.totalsec{
+  position: absolute;
+  bottom: 16%;
+  left: 71%;
+}
+
+.totalmin{
+  position: absolute;
+  bottom: 10%;
+  left: 71%;
+}
+
+.totalhour{
+  position: absolute;
+  bottom: 4%;
+  left: 71%;
+}
+
+.totalTimeTitle{
+  position: absolute;
+  bottom: 22%;
+  left: 71%;
+}
+
+.Monday {
+  color: #FF0000;
+}
+
+.Tuesday{
+  color: #FF6B5E;
+}
+
+.Wednesday{
+  color: #FFC2A6;
+}
+
+.Thursday{
+  color: #C8FFB3;
+}
+
+.Friday{
+  animation: rainbowFlash 1s infinite;
+}
+
+.Weekend{
+  color: #00FF00;
+}
+
+.fridayFrog{
+  visibility: hidden;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  bottom: 18%;
+  left: 40%;
+}
+
+.wednesdayFrog{
+  visibility: hidden;
+  width: 20%;
+  height: 30%;
+  position: absolute;
+  bottom: 18%;
+  left: 40%;
+}
+
+.hidden-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.hidden-image img {
+  width: 70%;
+  height: 70%;
+}
+
+.image-container:hover .hidden-image {
+  opacity: 1;
+  transition: opacity ease-in 10s;
+}
+
+.stareText {
+  color: white;
+  font-family: candara,verdana,sans-serif;
+  font-size: 12pt;
+  text-align: left;
+}
+
+#language-selection {
+  position: fixed;
+  top: 10px; /* Adjust this value to control the vertical position */
+  right: 10px; /* Adjust this value to control the horizontal position */
+}
+
+.language-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline; /* Display the buttons inline */
+  margin-right: 1px; /* Adjust the margin as needed for spacing */
+}
+
+.language-button img {
+  width: 30px; /* Adjust this value to control the icon size */
+  height: auto;
+}
+
+.beerfall {
+  position: absolute;
+  background-image: url('bajer.png'); /* Replace 'snowflake.png' with your custom snowflake image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px; /* Set the width to match your image width */
+  height: 100px; /* Set the height to match your image height */
+  animation: beerfall 8s ease-in infinite;
+}
+
+.flashingTextDark {
+  animation: flashDark 1s infinite;
+}
+
+.flashingTextLight {
+  animation: flashLight 1s infinite;
+}
+
+@keyframes flashDark {
+  0% {
+    color: #00FF00;
+  }
+  100% {
+    color: #ccc;
+  }
+}
+
+@keyframes flashLight {
+  0% {
+    color: gold;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+@keyframes rainbowFlash {
+  0%, 100% {
+    color: red;
+    text-shadow: 0 0 10px red;
+  }
+  14% {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+  }
+  28% {
+    color: yellow;
+    text-shadow: 0 0 10px yellow;
+  }
+  42% {
+    color: green;
+    text-shadow: 0 0 10px green;
+  }
+  57% {
+    color: blue;
+    text-shadow: 0 0 10px blue;
+  }
+  71% {
+    color: indigo;
+    text-shadow: 0 0 10px indigo;
+  }
+  85% {
+    color: violet;
+    text-shadow: 0 0 10px violet;
+  }
+}
+
+@keyframes beerfall {
+  0% {
+      transform: translateY(-5px) translateX(5px);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh) translateX(5px);
+      opacity: 0.4;
+  }
+}
