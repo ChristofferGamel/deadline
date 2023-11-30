@@ -1,17 +1,20 @@
-const targetDate = new Date("2023-12-01T00:00:00");
+// Set your target date here (format: YYYY-MM-DDTHH:mm:ss)
+const targetDate = new Date("2023-12-21T12:00:00");
 
 function updateCountdown() {
     const now = new Date();
     const timeDifference = targetDate - now;
 
     if (timeDifference > 0) {
-        const seconds = Math.floor((timeDifference / 1000) % 60);
-        const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+        const seconds = Math.floor((timeDifference / 1000) % 60);
 
         document.getElementById("countDownSecond").textContent = `${seconds} seconds`;
         document.getElementById("countDownMinute").textContent = `${minutes} minutes`;
         document.getElementById("countDownHour").textContent = `${hours} hours`;
+        document.getElementById("countDownDay").textContent = `${days} days`;
 
         setTimeout(updateCountdown, 1000);
     } else {
@@ -19,6 +22,7 @@ function updateCountdown() {
         document.getElementById("countDownSecond").textContent = "Countdown reached!";
         document.getElementById("countDownMinute").style.display = "none";
         document.getElementById("countDownHour").style.display = "none";
+        document.getElementById("countDownDay").style.display = "none";
     }
 }
 
